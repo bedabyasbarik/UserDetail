@@ -6,6 +6,10 @@ public class UserVO {
 	private String phoneNumber;
 	private int age;
 	
+	public UserVO(){
+		
+	}
+ 
 	public UserVO(int userId,String userName,String phoneNumber,int age) {
 		this.userId=userId;
 		this.userName=userName;
