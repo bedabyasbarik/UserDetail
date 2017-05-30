@@ -13,17 +13,18 @@ import com.webser.vo.UserVO;
 
 @Service
 public class UserService {
-	List<UserVO> list=new ArrayList<UserVO>();
-    @Transactional
-	public List<UserVO> getAllUser(){
-		
-		list.add(new UserVO(1, "bedabyas", "55598556", 25));
-		list.add(new UserVO(2, "manju", "568468668", 28));
-		list.add(new UserVO(3, "shr", "568468468", 22));
-		list.add(new UserVO(4, "madhu", "25458486", 27));
-		
-		return list;
-		
+	List<UserVO> list;
+
+
+	public List<UserVO> getAllUser(){	
+    	if(list==null){
+    	list=new ArrayList<UserVO>();
+    	list.add(new UserVO(1, "bedabyas", "55598556", 25,"pes","bangalore"));
+    	list.add(new UserVO(2, "manju", "568468668", 28,"mara","bangalore"));
+    	list.add(new UserVO(3, "shr", "568468468", 22,"mara","bangalore"));
+    	list.add(new UserVO(4, "madhu", "25458486", 27,"pes","bangalore"));	
+    	}
+		return list;		
 	}
     
     @Transactional
