@@ -5,16 +5,27 @@ public class UserVO {
 	private String userName;
 	private String phoneNumber;
 	private int age;
+	private Address address;
 	
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
 	public UserVO(){
 		
 	}
  
-	public UserVO(int userId,String userName,String phoneNumber,int age) {
+	public UserVO(int userId,String userName,String phoneNumber,int age,String street,String city) {
+
 		this.userId=userId;
 		this.userName=userName;
 		this.phoneNumber=phoneNumber;
 		this.age=age;
+		this.address=new Address(street, city);
 	}
 	public int getUserId() {
 		return userId;
